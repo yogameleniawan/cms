@@ -1,0 +1,24 @@
+Pertemuan 4 Model
+
+Model :
+Model berfungsi untuk menangani database yang mana meliputi query ke database
+insert data baru, update dan menghapus database.
+
+Migration :
+
+berfungsi untuk mengontrol database yang mana dapat mengubah atau menghapus
+struktur tabel tanpa harus membuka gui database.
+
+Seeding :
+
+pada seeding bertujuan memberikan data awal pada database yang mana secara tidak
+langsung seeding ini menguji apakah fitur yang kita buat sudah berjalan dengan
+baik, apabila menggunakan dbms maka kurang praktis dikarenakan harus menginput 
+satu persatu dan kelemahannya apabila ingin menguji banyak data maka akan 
+mengganggu efektifitas waktu.
+
+Caching :
+
+fungsi dari caching ini mengurangi beban dalam pengambilan data dari database maupun
+sumber lain, karena apabila session sudah habis maka akan otomatis dihapus 
+sesuai dengan lifetime pada cache. 

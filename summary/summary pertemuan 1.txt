@@ -1,0 +1,23 @@
+1. Instalasi Laravel
+Mempelajari dan mempraktekan menginstall Framework Laravel mulai dari awal, yang mana software yang diperlukan yaitu composer.
+Setelah menginstall composer langkah selanjutnya adalah membuat project baru dengan framework laravel dengan mengetikkan perintah 
+pada terminal create-project --prefer-dist laravel/laravel blog "6.*" yang mana blog merupakan nama project dan "6.*" merupakan versi 
+dari laravel. Pastikan komputer terhubung dengan internet, kemudian proses download dan install akan di mulai, setelah proses download
+dan install selesai lalu masuk ke dalam direktori project yang dibuat, kemudian jalankan perintah php artisan key:generate untuk membuat aplication key,
+setelah itu ketik php artisan serve untuk memulai project yang dibuat dengan IP server yang sudah tertera. Apabila IP server dapat diakses maka proses instalasi
+framework laravel telah berhasil.
+
+2. Belajar Git
+
+Menginstall dan mendaftar akun git, setelah itu mengakses repository github yang sudah disediakan di grub.
+Untuk membuat repository dengan mengetikkan perintah git init, kemudian dilanjutkan menambahkan file pada repository
+setelah itu untuk memberikan komentar tentang project yang dibuat dengan menggunakan perintah git commit -m "komentar"
+setelah dibuat langkah selanjutnya membuat branch, setelah branch dibuat maka menyambungkan repository komputer
+dengan repository pada web github. Setelah itu file dari komputer dipush ke repository github.
+
+3. Mengirim project dan rangkuman ke Git
+
+langkah pertama mengetikkan perintah git add . untuk menambahkan project yang telah dibuat, setelah
+itu melakukan commit dengan tujuan memberikan komentar pada project sehingga mempermudah apabila
+ingin melanjutkan project yang dibuat. Kemudian melakukan push dari komputer ke repository github dengan
+perintah git push -u origin master

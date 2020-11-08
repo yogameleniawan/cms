@@ -1,0 +1,16 @@
+Belajar tentang Autentikasi
+
+Autentikasi ini sendiri merupakan proses login dan register ke dalam website kita, yang mana
+ketika melakukan proses register maka inputan dari data akan dimasukkan ke dalam database tabel users
+setelah itu untuk melakukan proses login sendiri cukup mengisi sesuai dengan inputan dari data yang sudah 
+diinputkan pada register form.
+
+Untuk memberikan tampilan login dan register pada layout bootstrap
+cukup menambahkan kode untuk membuat link baru untuk login dan register.
+Untuk memberikan tulisan login dan register apabila user dinyatakan belum login 
+perlu mengambil informasi data login dengan mengambil nilai Auth::id() yang mana apabila nilai Auth::id() ada 
+maka tulisan login dan register tidak ada, tetapi apabila nilai Auth::id() tidak ada maka akan muncul tulisan
+login dan register.
+
+Untuk menampilkan data info akun dan tulisan logout perlu diberikan logika jika Auth::id() ada nilainya maka tulisan log out muncul
+dan informasi akun akan ditampilkan, apabila Auth::id() kosong maka tulisan log out dan informasi akun tidak akan ditampilkan.

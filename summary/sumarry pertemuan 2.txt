@@ -1,0 +1,101 @@
+Routing :
+
+Belajar tentang routing, yang mana routing adalah jalur URL yang dapat diakses
+oleh pengguna.
+
+untuk membuat jalur basic routing dapat menggunakan kode :
+Route::get(‘/hello’, function () {
+return ‘Hello World’;
+});
+
+Controller : 
+
+Belajar tentang controller, yang mana controller digunakan untuk mengelompokkan kode menjadi lebih terstruktur
+simpelnya kode program akan dikumpulkan pada satu kelas controler yang dibuat sehingga ketika melakukan perbaikan
+dapat dilakukan dengan mudah.
+
+Untuk membuat basic controller dapat menggunakan cara berikut : 
+
+php artisan make:controller WelcomeController (untuk membuat WelcomeController.php yang berada pada direktori ​app/Http/Controllers/)
+
+PRAKTIKUM 1 :
+
+1. pada praktikum 1 nomer 1 membuat beberapa routing dengan isi routing URL(/) yaitu menampilkan tulisan selamat datang
+dan membuat routing URL(/about) yang menampilkan NIM dan nama dengan kode :
+
+Route::get(‘/’, function () {
+return ‘selamat datang’;
+});
+
+Route::get(‘/about’, function () {
+return 'NIM : 1931710083 Nama : Yoga Meleniawan Pamungkas';
+});
+
+2. pada praktikum 1 nomer 2 menggunakan konsep route parameter dengan menambah kode dibawahnya :
+
+Route::get('/articles/{page}', function ($page) {
+return 'Halaman artikel dengan id ' .$page;
+}); (page merupakan variable dan bisa diubah secara dinamis)
+
+PRAKTIKUM 2
+
+1. pada praktikum 2 nomer 1 memindahkan logika kedalam sebuah controller dengan nama PageController
+
+php artisan make:controller PageController (Membuat controller PageController)
+
+kemudian melakukan pembuatan kode pada PageController
+
+class PageController extends Controller
+{
+    public function hello(){
+        return 'Hello World';
+    }
+
+    public function home(){
+        return 'Selamat Datang';
+    }
+
+    public function about(){
+        return 'NIM : 1931710083 Nama : Yoga Meleniawan Pamungkas';
+    }
+}
+
+dan pada web.php
+
+Route::get('/', 'PageController@home');
+Route::get('/hello', 'PageController@hello');
+Route::get('/about', 'PageController@about');
+
+2. pada praktikum 2 nomor 2 melakukan implementasi konsep single action controller yang mana
+single action controller ini yang hanya mengontrol satu tindakan saja
+
+Membuat 3 single action controller : 
+
+php artisan make:controller HomeController --invokable
+php artisan make:controller AboutController --invokable
+php artisan make:controller ArticleController --invokable
+
+kemudian pada masing masing controller dilakukan penambahan kode : 
+
+HomeController : 
+
+public function __invoke(Request $request)
+    {
+        return 'Selamat Datang';
+    }
+
+
+AboutController : 
+
+public function __invoke(Request $request)
+    {
+        return 'NIM : 1931710083 Nama : Yoga Meleniawan Pamungkas';
+    }
+
+
+ArticleController : 
+
+public function __invoke($page)
+    {
+            return 'Hello, ini halaman belajar route '.$page;
+    }

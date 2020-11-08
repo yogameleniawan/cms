@@ -1,0 +1,21 @@
+VIEW
+
+belajar tentang view yang mana view merupakan bagian dari laravel yang bertugas memberikan tampilan
+atau interface kepada user sehingga memiliki tampilan pada web yang dibuat.
+
+di dalam routes akan dilakukan pemanggilan controller yang mana
+controller akan mengembalikan nilai return dengan memanggil view yang sudah dibuat.
+
+untuk lokasi dari view ini berada pada directory resources/view.
+
+Blade Layout, Section, dan Component
+
+Layout digunakan sebagai view utama yang akan ditampilkan oleh child view yang sudah dibuat.
+sehingga pada layout master view akan dijadikan tempat yang digunakan oleh view,yang mana terdiri
+dari section.
+
+Belajar Bootsrap
+
+Melakukan instalasi bootstrap, tetapi sebelum melakukan instalasi bootstrap 
+diharapkan menginstall nodejs terlebih dahulu yang mana nodejs
+merupakan software paket frontend.
